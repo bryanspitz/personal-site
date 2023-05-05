@@ -9,19 +9,20 @@ body {
     background-color: #6CA9E6;
     color: #fff;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
 }
 
 .hero-text {
+    flex: 6;
     display: flex;
     flex-direction: column;
-    height: 60vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: 0 50px 0 50px;
-}
-
-.hero-text > * {
+    margin: 50px;
     max-width: 600px;
 }
 
@@ -41,6 +42,7 @@ h1 {
 }
 
 .hero-screenshots {
+    flex: 4;
     height: 40vh;
     width: 100%;
     display: flex;
@@ -87,7 +89,7 @@ h1 {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 680px) {
     h1 {
         font-size: 40pt;
     }
@@ -129,6 +131,11 @@ h1 {
 
 .resume-row {
     display: flex;
-    justify-content: space-evenly;
-    
+    justify-content: space-around;
+    gap: 50px;
+    margin: 50px;
+}
+
+.resume-row > * {
+    flex: 1;
 }
