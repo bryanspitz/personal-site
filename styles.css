@@ -130,12 +130,47 @@ h1 {
 /* Resume section */
 
 .resume-row {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 50px;
     margin: 50px;
 }
 
-.resume-row > * {
+.resume-col {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #396999;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.resume-col > h2 {
+    color: #396999;
+    margin: 0;
+}
+
+.resume-col > ul {
     flex: 1;
+    padding-left: 1em;
+}
+
+.resume-col > ul > li {
+    margin-bottom: 0.5em;
+}
+
+.resume-col p {
+    text-align: right;
+    margin: 0;
+}
+
+@media (max-width: 920px) {
+    .resume-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 680px) {
+    .resume-row {
+        grid-template-columns: 1fr;
+    }
 }
