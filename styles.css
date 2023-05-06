@@ -206,12 +206,35 @@ li {
     border: 2px solid #396999;
     padding: 20px;
     border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
     overflow: hidden;
 }
 
 .project > img {
-    width: 100%;
+    width: 350px;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 920px) {
+    #projects {
+        height: unset;
+    }
+
+    .projects-carousel {
+        grid-template-columns: 100%;
+        overflow: unset;
+    }
+
+    .project > img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 400px) {
+    .project > img {
+        float: none;
+        width: auto;
+        height: 120px;
+    }
 }
